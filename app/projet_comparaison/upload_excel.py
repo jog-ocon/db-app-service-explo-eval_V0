@@ -14,7 +14,6 @@ def upload_eval():
         df_contributeurs_eval = pd.read_excel(uploaded_file_eval, sheet_name = 5, header = 2)
         df_eval['ID-DE'] = df_eval['ID-DE'].astype('object') #no se ve asi en streamlit pero si funciona
         st.success("Excel uploaded successfully :tada:")
-        print(df_eval.dtypes)
         return df_eval, df_contributeurs_eval
     else:
         return None, None
